@@ -1,4 +1,4 @@
-name: Node CI Pipeline
+name: DevOps CI Pipeline
 
 on:
   push:
@@ -21,6 +21,5 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Verify Application
-        run: |
-          echo "Build Successful"
+      - name: Build Docker Image
+        run: docker build -t devops-project .
